@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiShadows.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:page="clr-namespace:MauiShadows.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiShadows">
+
+    <ShellContent
+        Title="Images"
+        ContentTemplate="{DataTemplate page:ImageShadowsPage}"
+        Route="image" />
+
+    <ShellContent
+        Title="Border"
+        ContentTemplate="{DataTemplate page:BorderShadowsPage}"
+        Route="border" />
+
+</Shell>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiShadows.Pages.BorderShadowsPage"
+             Title="Border Shadows">
+
+    <ContentPage.Resources>
+
+        <Style TargetType="Border" >
+            <Setter Property="StrokeShape"
+                    Value="RoundRectangle 8" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout>
+        <Border>
+            <Grid RowDefinitions="20, 70, auto"
+                  Padding="15"
+                  RowSpacing="8"
+                  ColumnDefinitions="auto, * , auto">
+
+                <Label Text="Shadow on Border"
+                       FontAttributes="Bold"
+                       Grid.ColumnSpan="2"
+                       FontSize="Header" />
+
+                <Label Text="The border here directly has a shadow. The border is also left visible"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2" />
+
+                <Button Text="Ok"
+                        Grid.Row="2" />
+
+                <Button Text="Cancel"
+                        Grid.Row="2"
+                        Grid.Column="2" />
+
+            </Grid>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
