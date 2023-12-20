@@ -11,31 +11,137 @@
                     Value="RoundRectangle 8" />
         </Style>
     </ContentPage.Resources>
-    
-    <VerticalStackLayout>
-        <Border>
-            <Grid RowDefinitions="20, 70, auto"
-                  Padding="15"
-                  RowSpacing="8"
-                  ColumnDefinitions="auto, * , auto">
 
-                <Label Text="Shadow on Border"
+    <ScrollView>
+        <VerticalStackLayout>
+            <Border>
+                <Border.Shadow>
+                    <Shadow Offset="20,20"
+                            Radius="40"
+                            Opacity="0.8" />
+                </Border.Shadow>
+                <Grid RowDefinitions="20, 70, auto"
+                      Padding="15"
+                      RowSpacing="8"
+                      ColumnDefinitions="auto, * , auto">
+
+                    <Label Text="Shadow on Border"
+                           FontAttributes="Bold"
+                           Grid.ColumnSpan="2"
+                           FontSize="Header" />
+
+                    <Label Text="The border here directly has a shadow. The border is also left visible"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2" />
+
+                    <Button Text="Ok"
+                            Grid.Row="2" />
+
+                    <Button Text="Cancel"
+                            Grid.Row="2"
+                            Grid.Column="2" />
+
+                </Grid>
+            </Border>
+
+            <Border Margin="0, 30, 0, 0"
+                    StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow Offset="20,20"
+                            Radius="40"
+                            Opacity="0.8" />
+                </Border.Shadow>
+                <Grid RowDefinitions="20, 70, auto"
+                        Padding="15"
+                        RowSpacing="8"
+                        ColumnDefinitions="auto, * , auto">
+
+                    <Label Text="Shadow on Container"
                        FontAttributes="Bold"
                        Grid.ColumnSpan="2"
                        FontSize="Header" />
 
-                <Label Text="The border here directly has a shadow. The border is also left visible"
-                       Grid.Row="1"
-                       Grid.ColumnSpan="2" />
+                    <Label Text="The border here directly has a shadow. Border thickness is set to 0 to simulate borderless shadows on cards"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2" />
 
-                <Button Text="Ok"
+                    <Button Text="Ok"
                         Grid.Row="2" />
 
-                <Button Text="Cancel"
+                    <Button Text="Cancel"
                         Grid.Row="2"
                         Grid.Column="2" />
 
+                </Grid>
+            </Border>
+
+
+            <Grid>
+                <Grid.Shadow>
+                    <Shadow Offset="20,20"
+                            Radius="40"
+                            Opacity="0.8" />
+                </Grid.Shadow>
+                <Border Margin="0, 30, 0, 0">
+                    <Grid RowDefinitions="20, 70, auto"
+                            Padding="15"
+                            RowSpacing="8"
+                            ColumnDefinitions="auto, * , auto">
+
+                        <Label Text="Shadow on Container 2"
+                               FontAttributes="Bold"
+                               Grid.ColumnSpan="2"
+                               FontSize="Header" />
+
+                        <Label Text="The parent of the border (a Grid) has the shadow."
+                               Grid.Row="1"
+                               Grid.ColumnSpan="2" />
+
+                        <Button Text="Ok"
+                                Grid.Row="2" />
+
+                        <Button Text="Cancel"
+                                Grid.Row="2"
+                                Grid.Column="2" />
+
+                    </Grid>
+                </Border>
             </Grid>
-        </Border>
-    </VerticalStackLayout>
+
+            <Grid>
+                <Grid.Shadow>
+                    <Shadow Brush="Gray"
+                            Offset="20,20"
+                            Radius="40"
+                            Opacity="0.8"/>
+                </Grid.Shadow>
+                <Border Margin="0, 30, 0, 0"
+                        BackgroundColor="White">
+                    <Grid RowDefinitions="20, 70, auto"
+                            Padding="15"
+                            RowSpacing="8"
+                            ColumnDefinitions="auto, * , auto">
+
+                        <Label Text="Shadow on Border's container"
+                               FontAttributes="Bold"
+                               Grid.ColumnSpan="3"
+                               FontSize="Header" />
+
+                        <Label Text="The parent of the border (a Grid) has the shadow. The BackgroundColor of the Border is made to match the page."
+                               Grid.Row="1"
+                               Grid.ColumnSpan="3" />
+
+                        <Button Text="Ok"
+                                Grid.Row="2" />
+
+                        <Button Text="Cancel"
+                                Grid.Row="2"
+                                Grid.Column="2" />
+
+                    </Grid>
+                </Border>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
